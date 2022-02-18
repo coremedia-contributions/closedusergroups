@@ -16,7 +16,7 @@ git submodule add  -b presales-2110.2 https://github.com/coremedia-contributions
 
 - Use the extension tool in the root folder of the project to link the modules into your workspace.
  ```
-mvn -f workspace-configuration/extensions com.coremedia.maven:extensions-maven-plugin:LATEST:sync -Denable=closedusergroups
+mvn -f workspace-configuration/extensions extensions:sync -Denable=closedusergroups
 ```
 
 
