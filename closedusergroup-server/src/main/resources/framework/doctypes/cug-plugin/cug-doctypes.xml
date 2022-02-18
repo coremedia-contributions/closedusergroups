@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<DocumentTypeModel xmlns="http://www.coremedia.com/2008/documenttypes"
+                   Name="blueprint-cug-doctypes"
+                   Title="Closed User Group Types">
+  <ImportGrammar Name="coremedia-struct-2008"/>
+
+  <ImportDocType Name="CMFolderProperties" From="blueprint-doctypes"/>
+
+  <DocTypeAspect TargetType="CMFolderProperties">
+    <XmlProperty Name="localSettings" Grammar="coremedia-struct-2008"/>
+  </DocTypeAspect>
+
+</DocumentTypeModel>
