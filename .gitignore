@@ -1,0 +1,25 @@
+# IntelliJ Idea:
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Maven:
+target/
+overlays/
+.m2/
+.mvn/timing.properties
+
+# NodeJS
+node_modules/
+
+# config
+.npmrc
+
+# Jangaroo Build
+dist/
+build/
+generated/
+
+# osx
+.DS_Store
