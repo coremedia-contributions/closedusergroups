@@ -169,17 +169,11 @@
       "@coremedia/studio-client.main.editor-components/*": [
         "../node_modules/@coremedia/studio-client.main.editor-components/src/*"
       ],
-      "@coremedia/studio-client.main.es-models/*": [
-        "../node_modules/@coremedia/studio-client.main.es-models/src/*"
-      ],
       "@coremedia/studio-client.main.image-editor-components/*": [
         "../../../../../../../../../apps/studio-client/node_modules/.pnpm/@coremedia+studio-client.main.image-editor-components@2201.1.0/node_modules/@coremedia/studio-client.main.image-editor-components/src/*"
       ],
       "@coremedia/studio-client.main.image-map-editor-components/*": [
         "../../../../../../../../../apps/studio-client/node_modules/.pnpm/@coremedia+studio-client.main.image-map-editor-components@2201.1.0/node_modules/@coremedia/studio-client.main.image-map-editor-components/src/*"
-      ],
-      "@coremedia/studio-client.main.social-studio-plugin/*": [
-        "../node_modules/@coremedia/studio-client.main.social-studio-plugin/src/*"
       ],
       "@coremedia/studio-client.multi-site-models/*": [
         "../node_modules/@coremedia/studio-client.multi-site-models/src/*"

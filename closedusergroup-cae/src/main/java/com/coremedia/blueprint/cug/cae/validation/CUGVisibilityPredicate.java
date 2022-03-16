@@ -26,8 +26,8 @@ import java.util.function.Predicate;
  */
 public class CUGVisibilityPredicate implements Predicate<CMLinkable> {
 
-  private CUGAuthorityStrategy cugAuthorityStrategy;
-  private ContextHelper contextHelper;
+  private final CUGAuthorityStrategy cugAuthorityStrategy;
+  private final ContextHelper contextHelper;
 
   public CUGVisibilityPredicate(CUGAuthorityStrategy cugAuthorityStrategy, ContextHelper contextHelper) {
     this.cugAuthorityStrategy = cugAuthorityStrategy;

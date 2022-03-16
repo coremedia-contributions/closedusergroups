@@ -13,8 +13,6 @@
     "@coremedia/studio-client.ext.ui-components": "2201.1.0",
     "@coremedia/studio-client.main.bpbase-studio-components": "2201.1.0",
     "@coremedia/studio-client.main.editor-components": "2201.1.0",
-    "@coremedia/studio-client.main.es-models": "2201.1.0",
-    "@coremedia/studio-client.main.social-studio-plugin": "2201.1.0",
     "@coremedia/studio-client.multi-site-models": "2201.1.0",
     "@jangaroo/ext-ts": "^1.0.2",
     "@jangaroo/runtime": "^1.0.3"
