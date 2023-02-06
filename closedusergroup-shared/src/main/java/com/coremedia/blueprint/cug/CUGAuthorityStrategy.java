@@ -14,7 +14,7 @@ import java.util.Locale;
 public class CUGAuthorityStrategy {
 
   public static final SimpleAttributes2GrantedAuthoritiesMapper MAPPER = new SimpleAttributes2GrantedAuthoritiesMapper();
-  private FolderPropertiesFinder folderPropertiesFinder;
+  private final FolderPropertiesFinder folderPropertiesFinder;
 
   public CUGAuthorityStrategy(FolderPropertiesFinder folderPropertiesFinder) {
     this.folderPropertiesFinder = folderPropertiesFinder;

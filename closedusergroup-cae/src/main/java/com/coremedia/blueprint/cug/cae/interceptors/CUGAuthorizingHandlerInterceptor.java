@@ -11,10 +11,12 @@ import com.coremedia.objectserver.dataviews.DataViewFactory;
 import com.coremedia.objectserver.web.HandlerHelper;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Required;
+import org.springframework.lang.Nullable;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
@@ -23,8 +25,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
-public class CUGAuthorizingHandlerInterceptor extends HandlerInterceptorAdapter {
+public class CUGAuthorizingHandlerInterceptor implements HandlerInterceptor {
 
   private SettingsService settingsService;
   private CUGAuthorityStrategy cugAuthorityStrategy;
@@ -111,11 +114,7 @@ public class CUGAuthorizingHandlerInterceptor extends HandlerInterceptorAdapter 
     Navigation rootNavigation = currentNavigation.getRootNavigation();
 
     CMChannel cugSettingConversionChannel = settingsService.setting("cug-conversion-channel", CMChannel.class, rootNavigation);
-    if (cugSettingConversionChannel != null) {
-      redirectPage = asPage(cugSettingConversionChannel);
-    } else {
-      redirectPage = asPage(currentNavigation);
-    }
+    redirectPage = asPage(Objects.requireNonNullElse(cugSettingConversionChannel, currentNavigation));
 
     // ModelAndView manipulation
     modelAndView.getModelMap().addAttribute("self", redirectPage);
@@ -143,20 +142,4 @@ public class CUGAuthorizingHandlerInterceptor extends HandlerInterceptorAdapter 
     }
     return page;
   }
-
-  @Required
-  public void setSettingsService(SettingsService settingsService) {
-    this.settingsService = settingsService;
-  }
-
-  @Required
-  public void setCugAuthorityStrategy(CUGAuthorityStrategy cugAuthorityStrategy) {
-    this.cugAuthorityStrategy = cugAuthorityStrategy;
-  }
-
-  @Required
-  public void setDataViewFactory(DataViewFactory dataViewFactory) {
-    this.dataViewFactory = dataViewFactory;
-  }
-
 }

@@ -13,15 +13,15 @@ import java.util.function.Predicate;
  */
 public class CUGVisibilityValidator extends AbstractValidator<CMLinkable> {
 
-  private CUGAuthorityStrategy cugAuthorityStrategy;
-  private ContextHelper contextHelper;
+  private final CUGAuthorityStrategy cugAuthorityStrategy;
+  private final ContextHelper contextHelper;
 
   public CUGVisibilityValidator(CUGAuthorityStrategy cugAuthorityStrategy, ContextHelper contextHelper) {
     this.cugAuthorityStrategy = cugAuthorityStrategy;
     this.contextHelper = contextHelper;
   }
 
-  public boolean supports(Class clazz) {
+  public boolean supports(Class<?> clazz) {
     return CMLinkable.class.isAssignableFrom(clazz);
   }
 

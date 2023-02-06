@@ -1,8 +1,6 @@
 package com.coremedia.blueprint.cug.cae.preview;
 
-import com.coremedia.blueprint.cug.cae.CUGAuthorityLoader;
 import com.coremedia.cap.content.Content;
-import com.coremedia.objectserver.beans.ContentBeanFactory;
 import com.coremedia.personalization.context.ContextCollection;
 import com.coremedia.personalization.context.PropertyProfile;
 import com.coremedia.personalization.preview.TestContextExtractor;
@@ -18,7 +16,7 @@ import java.util.Map;
 public final class AuthorityGroupsExtractor implements TestContextExtractor {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(AuthorityGroupsExtractor.class);
-  private ContentBeanFactory contentBeanFactory;
+  public static final String AUTHORITIES = "authorities";
 
   public void extractTestContextsFromContent(final Content content, final ContextCollection contextCollection) {
     if (content == null || contextCollection == null) {
@@ -32,12 +30,12 @@ public final class AuthorityGroupsExtractor implements TestContextExtractor {
         Object properties = profileExtensions.get("properties");
         if (properties instanceof Map) {
           Map<String, Object> propertiesMap = (Map<String, Object>) properties;
-          if (propertiesMap.containsKey(CUGAuthorityLoader.AUTHORITIES)) {
-            Object authorities = propertiesMap.get(CUGAuthorityLoader.AUTHORITIES);
+          if (propertiesMap.containsKey(AUTHORITIES)) {
+            Object authorities = propertiesMap.get(AUTHORITIES);
             if (authorities instanceof List) {
               PropertyProfile propertyProfile = new PropertyProfile();
-              propertyProfile.setProperty(CUGAuthorityLoader.AUTHORITIES, authorities);
-              contextCollection.setContext(CUGAuthorityLoader.AUTHORITIES, propertyProfile);
+              propertyProfile.setProperty(AUTHORITIES, authorities);
+              contextCollection.setContext(AUTHORITIES, propertyProfile);
             }
           }
         }

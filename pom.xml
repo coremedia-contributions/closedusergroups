@@ -13,7 +13,6 @@
     <module>closedusergroup-preview-cae</module>
     <module>closedusergroup-caefeeder</module>
     <module>closedusergroup-server</module>
-    <module>closedusergroup-studio-lib</module>
     <module>closedusergroup-shared</module>
   </modules>
 

@@ -33,16 +33,13 @@
       <artifactId>cap-personalization</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.coremedia.elastic.social</groupId>
-      <artifactId>social-spring-security</artifactId>
-    </dependency>
-    <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.coremedia.blueprint</groupId>
-      <artifactId>contentbeans</artifactId>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>closedusergroup-shared</artifactId>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -54,21 +51,12 @@
       <artifactId>commons-lang3</artifactId>
     </dependency>
     <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>es-cae-users</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
       <groupId>com.coremedia.cms</groupId>
       <artifactId>coremedia-spring</artifactId>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.coremedia.elastic.social</groupId>
-      <artifactId>social-api</artifactId>
     </dependency>
     <dependency>
       <groupId>jakarta.servlet</groupId>
@@ -79,18 +67,6 @@
       <groupId>jakarta.servlet.jsp</groupId>
       <artifactId>jakarta.servlet.jsp-api</artifactId>
       <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.coremedia.elastic.core</groupId>
-      <artifactId>core-api</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>javax.inject</groupId>
-      <artifactId>javax.inject</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.coremedia.cms</groupId>
-      <artifactId>cae-contentbeanservices</artifactId>
     </dependency>
     <dependency>
       <groupId>com.coremedia.cms</groupId>
