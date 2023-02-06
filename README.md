@@ -11,7 +11,7 @@
 
 - From the project's root folder, clone this repository as submodule into the extensions folder. Make sure to use the branch name that matches your workspace version. 
 ```
-git submodule add  -b presales-2110.2 https://github.com/coremedia-contributions/closedusergroups modules/extensions/closedusergroups
+git submodule add  -b main https://github.com/coremedia-contributions/closedusergroups modules/extensions/closedusergroups
 ```
 
 - Use the extension tool in the root folder of the project to link the modules into your workspace.
