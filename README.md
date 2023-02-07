@@ -42,4 +42,15 @@ git submodule add  -b main https://github.com/coremedia-contributions/closeduser
 mvn -f workspace-configuration/extensions extensions:sync -Denable=closedusergroups
 ```
 
+## CoreMedia Community
+This is a CoreMedia Community project!
+
+Each CoreMedia Community project is an extra feature to be used with CoreMedia Content Cloud, including plugins, extensions, tools and 
+3rd party integrations.
+
+This code is meant to be example code, illustrating a set of features that could be used to enhance your 
+CoreMedia experience. We'd love to hear your feedback on use-cases and further developments! 
+
+The code comes as open-source without any warranties and is maintained on a best effort.
+
 
