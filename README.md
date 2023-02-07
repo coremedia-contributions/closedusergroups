@@ -1,9 +1,6 @@
 ![Status: Active](https://documentation.coremedia.com/badges/badge_status_active.png "Status: Active")
 ![For CoreMedia CMS](https://documentation.coremedia.com/badges/badge_coremedia_cms.png "For CoreMedia CMS")
 
-![CoreMedia Labs Logo](https://documentation.coremedia.com/badges/banner_coremedia_labs_wide.png "CoreMedia Labs Logo Title Text")
-
-
 # CoreMedia 'Closed User Groups'
 The Closed User Group (CUG) project is a CoreMedia Blueprint extension with the goal to provide restricted content areas
 on the CoreMedia CAE delivery. Editors  use CoreMedia Studio to define content visibility restrictions based on 
