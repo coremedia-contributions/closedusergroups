@@ -21,7 +21,6 @@
       <groupId>${project.groupId}</groupId>
       <artifactId>p13n-preview-cae</artifactId>
       <version>${project.version}</version>
-      <scope>runtime</scope>
     </dependency>
 
     <dependency>
