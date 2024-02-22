@@ -6,14 +6,14 @@ import com.coremedia.personalization.context.collector.ContextCollectionConfigur
 import com.coremedia.personalization.preview.TestContextSource;
 import com.coremedia.springframework.customizer.Customize;
 import com.coremedia.springframework.xml.ResourceAwareXmlBeanDefinitionReader;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.core.annotation.Order;
 import org.springframework.security.authentication.AuthenticationManager;
 
-@Configuration
+@AutoConfiguration
 @Import({
         P13NPreviewCaeContextConfiguration.class,
         ContextCollectionConfiguration.class

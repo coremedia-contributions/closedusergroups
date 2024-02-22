@@ -10,13 +10,13 @@ import com.coremedia.blueprint.cug.search.CUGSolrFilterProviderImpl;
 import com.coremedia.objectserver.dataviews.DataViewFactory;
 import com.coremedia.springframework.customizer.Customize;
 import com.coremedia.springframework.xml.ResourceAwareXmlBeanDefinitionReader;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.security.authentication.AuthenticationProvider;
 
-@Configuration
+@AutoConfiguration
 @Import(
         value = {
                 CUGConfiguration.class
