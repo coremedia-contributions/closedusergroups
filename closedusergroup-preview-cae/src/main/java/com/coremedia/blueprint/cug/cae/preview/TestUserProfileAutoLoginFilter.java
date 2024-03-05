@@ -86,7 +86,9 @@ public class TestUserProfileAutoLoginFilter implements Filter {
       if (personalContext instanceof PropertyProvider) {
         String givenname = (String) ((PropertyProvider) personalContext).getProperty(GIVEN_NAME);
 
-        if (StringUtils.isNotBlank(givenname)) {
+        if (StringUtils.isBlank(givenname)) {
+          givenname = "Test User";
+        }
 
           List<Content> authoritiyGroups = new ArrayList<>();
           if (authorities instanceof PropertyProvider) {
@@ -107,7 +109,7 @@ public class TestUserProfileAutoLoginFilter implements Filter {
           SecurityContext securityContext = SecurityContextHolder.getContext();
           securityContext.setAuthentication(authentication);
           // done with exchanging user credentials
-        }
+
       } else {
         LOG.trace("cannot handle securityContext {}", personalContext);
       }
