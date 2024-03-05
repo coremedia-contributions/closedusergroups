@@ -14,6 +14,7 @@
     <module>closedusergroup-caefeeder</module>
     <module>closedusergroup-server</module>
     <module>closedusergroup-shared</module>
+    <module>closedusergroup-headless-server</module>
   </modules>
 
 </project>
