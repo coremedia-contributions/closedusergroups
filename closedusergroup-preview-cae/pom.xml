@@ -23,6 +23,13 @@
       <version>${project.version}</version>
     </dependency>
 
+    <!-- required runtime dependency for user authentication -->
+    <dependency>
+      <groupId>com.coremedia.elastic.social</groupId>
+      <artifactId>social-spring-security</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-core</artifactId>
