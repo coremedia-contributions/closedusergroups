@@ -4,13 +4,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.coremedia.blueprint</groupId>
-  <artifactId>closedusergroup2</artifactId>
+  <artifactId>closedusergroups</artifactId>
   <version>1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
-    <module>closedusergroup-cae</module>
-    <module>closedusergroup-preview-cae</module>
+<!--    <module>closedusergroup-cae</module>-->
+<!--    <module>closedusergroup-preview-cae</module>-->
     <module>closedusergroup-caefeeder</module>
     <module>closedusergroup-server</module>
     <module>closedusergroup-shared</module>
