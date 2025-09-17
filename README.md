@@ -1,6 +1,6 @@
 
 
-![CoreMedia Content Cloud Version](https://img.shields.io/static/v1?message=2210&label=CoreMedia%20Content%20Cloud&style=for-the-badge&labelColor=666666&color=672779
+![CoreMedia Content Cloud Version](https://img.shields.io/static/v1?message=2506&label=CoreMedia%20Content%20Cloud&style=for-the-badge&labelColor=666666&color=672779
 "This badge shows the CoreMedia version(s) this project is compatible with.
 Please read the versioning section of the project to see what other CoreMedia versions are supported and how to find them."
 )
@@ -12,14 +12,15 @@ If a project is inactive it means that the development has been discontinued and
 # CoreMedia 'Closed User Groups'
 The Closed User Group (CUG) project is a CoreMedia Blueprint extension with the goal to provide restricted content areas
 on the CoreMedia CAE delivery. Editors  use CoreMedia Studio to define content visibility restrictions based on 
-customer roles. The CoreMedia CAE and Search restrict accessability of content items according to the setup in Studio.
+customer roles. The CoreMedia CAE and Search restrict accessibility of content items according to the setup in Studio.
 
 This extension implements a folder based restriction model based on a positive list. Visibility settings are stored in the
-folderProperties content type. The CAE uses Spring Security to authenticate and authorize users. As an example implementation 
-this extension provides a Spring Security Filter for the persona chooser provided with CoreMedia Adaptive Personalization.
+folderProperties content type. The CAE and Headless-Server uses Spring Security to authenticate and authorize users. As an example implementation 
+this extension provides a Spring Security Filter for the persona chooser provided with CoreMedia Personalization.
 See also: 
 ```
 closedusergroup-preview-cae/src/main/java/com/coremedia/blueprint/cug/cae/preview/TestUserProfileAutoLoginFilter.java
+closedusergroup-headless-server/src/main/java/com/coremedia/blueprint/cug/filter/AuthoritiesTestContextExtractor.java
 ```
  
 ### Setup of user roles and define visibility restrictions

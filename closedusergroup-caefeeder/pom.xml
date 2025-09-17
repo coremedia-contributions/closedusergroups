@@ -16,19 +16,47 @@
   </properties>
 
   <dependencies>
+
+    <!-- PROJECT dependencies -->
+    <dependency>
+      <groupId>com.coremedia.blueprint</groupId>
+      <artifactId>closedusergroup-shared</artifactId>
+    </dependency>
+
+
+    <!-- COREMEDIA dependencies -->
     <dependency>
       <groupId>com.coremedia.cms</groupId>
       <artifactId>cap-feeder-api</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>com.coremedia.blueprint</groupId>
-      <artifactId>closedusergroup-shared</artifactId>
+      <groupId>com.coremedia.cms</groupId>
+      <artifactId>cap-unified-api</artifactId>
     </dependency>
 
     <dependency>
       <groupId>com.coremedia.cms</groupId>
       <artifactId>coremedia-spring</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.coremedia.cms</groupId>
+      <artifactId>cap-caefeeder</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+
+
+    <!-- THIRD-PARTY dependencies -->
+    <dependency>
+      <groupId>com.github.spotbugs</groupId>
+      <artifactId>spotbugs-annotations</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-autoconfigure</artifactId>
     </dependency>
 
     <dependency>
@@ -41,23 +69,5 @@
       <artifactId>spring-security-core</artifactId>
     </dependency>
 
-    <dependency>
-      <groupId>com.coremedia.cms</groupId>
-      <artifactId>cap-unified-api</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>com.coremedia.cms</groupId>
-      <artifactId>cap-caefeeder</artifactId>
-      <scope>runtime</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>com.github.spotbugs</groupId>
-      <artifactId>spotbugs-annotations</artifactId>
-      <scope>provided</scope>
-    </dependency>
-
   </dependencies>
-
 </project>

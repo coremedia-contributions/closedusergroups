@@ -14,13 +14,13 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 
-import javax.servlet.Filter;
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.Filter;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -86,7 +86,9 @@ public class TestUserProfileAutoLoginFilter implements Filter {
       if (personalContext instanceof PropertyProvider) {
         String givenname = (String) ((PropertyProvider) personalContext).getProperty(GIVEN_NAME);
 
-        if (StringUtils.isNotBlank(givenname)) {
+        if (StringUtils.isBlank(givenname)) {
+          givenname = "Test User";
+        }
 
           List<Content> authoritiyGroups = new ArrayList<>();
           if (authorities instanceof PropertyProvider) {
@@ -107,7 +109,7 @@ public class TestUserProfileAutoLoginFilter implements Filter {
           SecurityContext securityContext = SecurityContextHolder.getContext();
           securityContext.setAuthentication(authentication);
           // done with exchanging user credentials
-        }
+
       } else {
         LOG.trace("cannot handle securityContext {}", personalContext);
       }

@@ -21,6 +21,12 @@
       <groupId>${project.groupId}</groupId>
       <artifactId>p13n-preview-cae</artifactId>
       <version>${project.version}</version>
+    </dependency>
+
+    <!-- required runtime dependency for user authentication -->
+    <dependency>
+      <groupId>com.coremedia.elastic.social</groupId>
+      <artifactId>social-spring-security</artifactId>
       <scope>runtime</scope>
     </dependency>
 
@@ -53,6 +59,10 @@
     <dependency>
       <groupId>com.coremedia.cms</groupId>
       <artifactId>coremedia-spring</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-autoconfigure</artifactId>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
