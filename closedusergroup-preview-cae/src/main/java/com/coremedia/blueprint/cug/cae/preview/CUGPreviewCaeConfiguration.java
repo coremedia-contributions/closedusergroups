@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.core.annotation.Order;
-import org.springframework.security.authentication.AuthenticationManager;
 
 @AutoConfiguration
 @Import({
@@ -25,8 +24,8 @@ import org.springframework.security.authentication.AuthenticationManager;
 )
 public class CUGPreviewCaeConfiguration {
   @Bean
-  public TestUserProfileAutoLoginFilter testUserProfileAutoLoginFilter(ContextCollection contextCollection, TestContextSource testContextSource, AuthenticationManager authenticationManager) {
-    return new TestUserProfileAutoLoginFilter(contextCollection, testContextSource, authenticationManager);
+  public TestUserProfileAutoLoginFilter testUserProfileAutoLoginFilter(ContextCollection contextCollection, TestContextSource testContextSource) {
+    return new TestUserProfileAutoLoginFilter(contextCollection, testContextSource);
   }
 
 

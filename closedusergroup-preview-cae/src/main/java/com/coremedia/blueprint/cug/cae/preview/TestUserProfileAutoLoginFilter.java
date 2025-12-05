@@ -8,7 +8,6 @@ import com.coremedia.personalization.preview.TestContextSource;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContext;
@@ -42,12 +41,10 @@ public class TestUserProfileAutoLoginFilter implements Filter {
 
   private final ContextCollection contextCollection;
 
-  private final AuthenticationManager authenticationManager;
 
-  public TestUserProfileAutoLoginFilter(ContextCollection contextCollection, TestContextSource testContextSource, AuthenticationManager authenticationManager) {
+  public TestUserProfileAutoLoginFilter(ContextCollection contextCollection, TestContextSource testContextSource) {
     this.contextCollection = contextCollection;
     this.testContextSource = testContextSource;
-    this.authenticationManager = authenticationManager;
   }
 
   @Override
@@ -105,9 +102,8 @@ public class TestUserProfileAutoLoginFilter implements Filter {
           List<String> collect = authoritiyGroups.stream().map(item -> item.getName().toUpperCase(Locale.ROOT)).collect(Collectors.toList());
           List<GrantedAuthority> grantedAuthorities = MAPPER.getGrantedAuthorities(collect);
           Authentication authenticationToken = new CUGAuthenticationToken(givenname, givenname, grantedAuthorities);
-          Authentication authentication = authenticationManager.authenticate(authenticationToken);
           SecurityContext securityContext = SecurityContextHolder.getContext();
-          securityContext.setAuthentication(authentication);
+          securityContext.setAuthentication(authenticationToken);
           // done with exchanging user credentials
 
       } else {
