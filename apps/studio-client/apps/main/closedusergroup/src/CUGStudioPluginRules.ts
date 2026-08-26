@@ -11,6 +11,10 @@ import resourceManager from "@jangaroo/runtime/l10n/resourceManager";
 import CUGStudioPlugin_properties from "./CUGStudioPlugin_properties";
 import CUGClosedUserGroupsFolderPropertiesPlugin from "./p13n/CUGClosedUserGroupsFolderPropertiesPlugin";
 import CUGUserProfileFormPlugin from "./p13n/CUGUserProfileFormPlugin";
+import ValidityTab from "@coremedia-blueprint/studio-client.main.blueprint-forms/custom/forms/ValidityTab";
+import GatedContentForm from "./forms/GatedContentForm";
+import AddItemsPlugin from "@coremedia/studio-client.ext.ui-components/plugins/AddItemsPlugin";
+import Component from "@jangaroo/ext-ts/Component";
 
 interface CUGStudioPluginRulesConfig extends Config<StudioPlugin> {
 }
@@ -35,6 +39,20 @@ class CUGStudioPluginRules extends StudioPlugin {
           plugins: [
             Config(CUGClosedUserGroupsFolderPropertiesPlugin),
           ],
+        }),
+
+        Config(ValidityTab, {
+          plugins: [
+            Config(AddItemsPlugin, {
+              recursive: true,
+              items: [
+                Config(GatedContentForm)
+              ],
+              after: [
+                Config(Component, {itemId: "validityForm"})
+              ]
+            })
+          ]
         }),
 
       ],
